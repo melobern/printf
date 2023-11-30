@@ -1,34 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_write_num.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 09:23:08 by mbernard          #+#    #+#             */
-/*   Updated: 2023/11/13 09:57:23 by mbernard         ###   ########.fr       */
+/*   Created: 2023/11/28 13:53:07 by mbernard          #+#    #+#             */
+/*   Updated: 2023/11/29 17:24:10 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_put_int(int n)
 {
+	int	len;
+
+	len = ft_int_len(n);
 	if (n == -2147483648)
-		write(fd, "-2147483648", 11);
+		write(1, "-2147483648", 11);
 	else
 	{
 		if (n < 0)
 		{
-			ft_putchar_fd('-', fd);
+			ft_putchar('-');
 			n = -n;
 		}
 		if (n < 10)
-			ft_putchar_fd(n + '0', fd);
+			ft_putchar(n + '0');
 		if (n >= 10)
 		{
-			ft_putnbr_fd(n / 10, fd);
-			ft_putchar_fd(n % 10 + '0', fd);
+			ft_put_int(n / 10);
+			ft_putchar(n % 10 + '0');
 		}
 	}
+	return (len);
+}
+
+int	ft_put_uns(unsigned int n)
+{
+	int	len;
+
+	len = ft_unsigned_len(n);
+	if (n < 0)
+	{
+		ft_putchar('-');
+		n = -n;
+	}
+	if (n < 10)
+		ft_putchar(n + '0');
+	if (n >= 10)
+	{
+		ft_put_uns(n / 10);
+		ft_putchar(n % 10 + '0');
+	}
+	return (len);
 }
