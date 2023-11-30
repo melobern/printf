@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:18:48 by mbernard          #+#    #+#             */
-/*   Updated: 2023/11/30 11:12:45 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/11/30 13:15:43 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,8 @@ int	ft_printf(const char *str, ...)
 			ft_putchar(str[cursor]);
 		else if (str[cursor + 1])
 			print_len += ft_chose_print(str[++cursor], args);
+		else
+			print_len = -1;
 		cursor++;
 	}
 	va_end(args);
