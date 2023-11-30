@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 13:01:27 by mbernard          #+#    #+#             */
-/*   Updated: 2023/11/30 11:29:49 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/11/30 13:13:09 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(void)
 	char* st2 = "55";
 	char* st3 = "55";
 	char* st4 = "55";
-/*
+
 	printf("YOURS : %i\n", ft_printf("A char to bless your heart : %c\tA int to count on : %i\tAn other : %i\tAn unsigned anonymous: %u\n%s\nA percent to make you lucky %%\nA.. x ? %x\tA.. X ?%X\n",
 							 'c',
 								INT_MIN,
@@ -70,10 +70,10 @@ int	main(void)
 												&st2,
 												&st3,
 												&st4));
-	printf("YOURS :%i\n", ft_printf(" NULL %s NULL ", NULL));
-	printf("MINE :%i\n", printf(" NULL %s NULL ", NULL));
+//	printf("YOURS :%i\n", ft_printf(" NULL %s NULL ", NULL));
+//	printf("MINE :%i\n", printf(" NULL %s NULL ", NULL));
 
-
+/*
         printf("YOURS : %i\n", ft_printf(" %d ", 0));
         printf("YOURS : %i\n", ft_printf(" %d ", INT_MAX));
         printf("YOURS : %i\n", ft_printf(" %d ", INT_MIN));
@@ -112,9 +112,15 @@ int	main(void)
         printf("YOURS LONG_MIN, LONG_MAX :%i\n", ft_printf(" %p %p ", LONG_MIN, LONG_MAX));
         printf("PRINTF ULONG_MAX, -ULONG_MAX :%i\n", printf(" %p %p ", ULONG_MAX, -ULONG_MAX));
         printf("YOURS ULONG_MAX, -ULONG_MAX :%i\n", ft_printf(" %p %p ", ULONG_MAX, -ULONG_MAX));
+
         printf("PRINTF :%i\n", printf(" %p %p ", 0, 0));
-*/	
         printf("YOURS :%i\n", ft_printf(" %p %p ", 0, 0));
-        printf("YOURS :%i\n", ft_printf(" blop %"));
+*/
+	printf("YOURS :%i\n", ft_printf(" blop %"));
+        printf("MINE :%i\n", printf(" blop %"));
+	printf(" (%i)\n", ft_printf("%c", 'a'));
+	printf("printf: ");
+	printf(" (%i)\n\n", printf("%c", 'a'));
+
 	return (0);
 }
