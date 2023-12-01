@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 13:01:27 by mbernard          #+#    #+#             */
-/*   Updated: 2023/11/30 13:13:09 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/11/30 15:59:21 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,5 @@ int	main(void)
 	printf(" (%i)\n", ft_printf("%c", 'a'));
 	printf("printf: ");
 	printf(" (%i)\n\n", printf("%c", 'a'));
-
 	return (0);
 }
