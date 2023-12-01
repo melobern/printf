@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:18:48 by mbernard          #+#    #+#             */
-/*   Updated: 2023/11/30 13:15:43 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/12/01 09:47:49 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int	ft_printf(const char *str, ...)
 	int		cursor;
 
 	if (write(1, 0, 0) == -1)
-		return (0);
+		return (-1);
 	if (str == NULL)
 		return (-1);
 	args_num = ft_count_args(str);
